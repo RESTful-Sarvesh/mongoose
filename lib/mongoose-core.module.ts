@@ -41,7 +41,7 @@ export class MongooseCoreModule implements OnApplicationShutdown {
       connectionFactory,
       ...mongooseOptions
     } = options;
-
+    console.log("Inside forRoot");
     const mongooseConnectionFactory =
       connectionFactory || ((connection) => connection);
     const mongooseConnectionName = getConnectionToken(connectionName);
