@@ -74,6 +74,7 @@ export class MongooseCoreModule implements OnApplicationShutdown {
   }
 
   static forRootAsync(options: MongooseModuleAsyncOptions): DynamicModule {
+    console.log("Inside forRootAsync");
     const mongooseConnectionName = getConnectionToken(options.connectionName);
 
     const mongooseConnectionNameProvider = {
